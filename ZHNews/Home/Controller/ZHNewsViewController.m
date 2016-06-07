@@ -9,6 +9,7 @@
 #import "ZHNewsViewController.h"
 #import "ZHChannelModel.h"
 #import "ZHChannelLabel.h"
+#import "ZHNewsCollectionViewCell.h"
 
 @interface ZHNewsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -36,6 +37,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     //设置滚动频道的UI
     [self setupChannelView];
+    [self setupNewsCollectionItem];
 
 }
 
@@ -43,9 +45,9 @@
 - (void)setupNewsCollectionItem{
 
     CGFloat itemW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat itemH = [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.channelView.frame);
+    CGFloat itemH = [UIScreen mainScreen].bounds.size.height - 64 - 44;
     self.newsCollectionFlowLayout.itemSize = CGSizeMake(itemW, itemH);
-
+    self.newsCollectionView.pagingEnabled = YES;
 }
 
 #pragma mark - 设置channelView上的频道
@@ -72,7 +74,16 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsItem" forIndexPath:indexPath];
+    
+    ZHNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsItem" forIndexPath:indexPath];
+    ZHChannelModel *channelModel = self.channelArr[indexPath.item];
+    
+    //根据频道的tid来确定服务器地址
+    if ([channelModel.tid isEqualToString:@"T1348647853363"]) {
+        cell.URLStirng = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-20.html",channelModel.tid];
+    }else{
+        cell.URLStirng = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/list/%@/0-20.html",channelModel.tid];
+    }
     return cell;
 
 }

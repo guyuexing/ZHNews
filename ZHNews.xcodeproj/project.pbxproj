@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F7AA87493791787C5455D0 /* libPods-ZHNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD889ECEEB4A1B7CB628DD6C /* libPods-ZHNews.a */; };
+		EC0B1C601D06D59E001DD2B0 /* ZHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C5F1D06D59E001DD2B0 /* ZHNewsTableViewController.m */; };
+		EC0B1C621D06D605001DD2B0 /* NewsTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0B1C611D06D605001DD2B0 /* NewsTableStoryboard.storyboard */; };
+		EC0B1C651D06D8FF001DD2B0 /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C641D06D8FF001DD2B0 /* ZHNewsModel.m */; };
+		EC0B1C691D06E0D3001DD2B0 /* ZHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C681D06E0D3001DD2B0 /* ZHHTTPSessionManager.m */; };
+		EC0B1C6F1D071795001DD2B0 /* ZHNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C6E1D071795001DD2B0 /* ZHNewsTableViewCell.m */; };
 		EC9B8C891D06929300F29AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C881D06929300F29AA8 /* main.m */; };
 		EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */; };
 		EC9B8C921D06929300F29AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8C901D06929300F29AA8 /* Main.storyboard */; };
@@ -17,9 +23,22 @@
 		EC9B8CAC1D06951500F29AA8 /* ZHChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CAB1D06951500F29AA8 /* ZHChannelModel.m */; };
 		EC9B8CB01D069B5600F29AA8 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CAF1D069B5600F29AA8 /* NSArray+Log.m */; };
 		EC9B8CB31D069C7900F29AA8 /* ZHChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */; };
+		ECF73C351D06A398003E706D /* ZHNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF73C341D06A398003E706D /* ZHNewsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EEA821369F322E32643A2FE /* Pods-ZHNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNews/Pods-ZHNews.release.xcconfig"; sourceTree = "<group>"; };
+		CD889ECEEB4A1B7CB628DD6C /* libPods-ZHNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZHNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B964A3BBD0A76912E231E /* Pods-ZHNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNews/Pods-ZHNews.debug.xcconfig"; sourceTree = "<group>"; };
+		EC0B1C5E1D06D59E001DD2B0 /* ZHNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHNewsTableViewController.h; path = ../ZHNewsTableViewController.h; sourceTree = "<group>"; };
+		EC0B1C5F1D06D59E001DD2B0 /* ZHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHNewsTableViewController.m; path = ../ZHNewsTableViewController.m; sourceTree = "<group>"; };
+		EC0B1C611D06D605001DD2B0 /* NewsTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsTableStoryboard.storyboard; sourceTree = "<group>"; };
+		EC0B1C631D06D8FF001DD2B0 /* ZHNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHNewsModel.h; path = ../../Home/Model/ZHNewsModel.h; sourceTree = "<group>"; };
+		EC0B1C641D06D8FF001DD2B0 /* ZHNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHNewsModel.m; path = ../../Home/Model/ZHNewsModel.m; sourceTree = "<group>"; };
+		EC0B1C671D06E0D3001DD2B0 /* ZHHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHTTPSessionManager.h; sourceTree = "<group>"; };
+		EC0B1C681D06E0D3001DD2B0 /* ZHHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHTTPSessionManager.m; sourceTree = "<group>"; };
+		EC0B1C6D1D071795001DD2B0 /* ZHNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNewsTableViewCell.h; sourceTree = "<group>"; };
+		EC0B1C6E1D071795001DD2B0 /* ZHNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNewsTableViewCell.m; sourceTree = "<group>"; };
 		EC9B8C841D06929300F29AA8 /* ZHNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9B8C881D06929300F29AA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +56,8 @@
 		EC9B8CAF1D069B5600F29AA8 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		EC9B8CB11D069C7900F29AA8 /* ZHChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHChannelLabel.h; sourceTree = "<group>"; };
 		EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHChannelLabel.m; sourceTree = "<group>"; };
+		ECF73C331D06A398003E706D /* ZHNewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNewsCollectionViewCell.h; sourceTree = "<group>"; };
+		ECF73C341D06A398003E706D /* ZHNewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNewsCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +65,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F7AA87493791787C5455D0 /* libPods-ZHNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64E657E4E4F06C46EC14083F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B964A3BBD0A76912E231E /* Pods-ZHNews.debug.xcconfig */,
+				8EEA821369F322E32643A2FE /* Pods-ZHNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3A3FA67B1A3CA4018FDA359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD889ECEEB4A1B7CB628DD6C /* libPods-ZHNews.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC0B1C5A1D06D575001DD2B0 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				EC0B1C611D06D605001DD2B0 /* NewsTableStoryboard.storyboard */,
+				EC0B1C5B1D06D575001DD2B0 /* Controller */,
+				EC0B1C5C1D06D575001DD2B0 /* Model */,
+				EC0B1C5D1D06D575001DD2B0 /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		EC0B1C5B1D06D575001DD2B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC0B1C5E1D06D59E001DD2B0 /* ZHNewsTableViewController.h */,
+				EC0B1C5F1D06D59E001DD2B0 /* ZHNewsTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC0B1C5C1D06D575001DD2B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC0B1C631D06D8FF001DD2B0 /* ZHNewsModel.h */,
+				EC0B1C641D06D8FF001DD2B0 /* ZHNewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC0B1C5D1D06D575001DD2B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC0B1C6D1D071795001DD2B0 /* ZHNewsTableViewCell.h */,
+				EC0B1C6E1D071795001DD2B0 /* ZHNewsTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC0B1C661D06E042001DD2B0 /* DownloadTool */ = {
+			isa = PBXGroup;
+			children = (
+				EC0B1C671D06E0D3001DD2B0 /* ZHHTTPSessionManager.h */,
+				EC0B1C681D06E0D3001DD2B0 /* ZHHTTPSessionManager.m */,
+			);
+			path = DownloadTool;
+			sourceTree = "<group>";
+		};
 		EC9B8C7B1D06929300F29AA8 = {
 			isa = PBXGroup;
 			children = (
 				EC9B8C861D06929300F29AA8 /* ZHNews */,
 				EC9B8C851D06929300F29AA8 /* Products */,
+				64E657E4E4F06C46EC14083F /* Pods */,
+				C3A3FA67B1A3CA4018FDA359 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +161,8 @@
 				EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */,
 				EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */,
 				EC9B8CA31D0694D100F29AA8 /* Home */,
+				EC0B1C661D06E042001DD2B0 /* DownloadTool */,
+				EC0B1C5A1D06D575001DD2B0 /* News */,
 				EC9B8C871D06929300F29AA8 /* Supporting Files */,
 			);
 			path = ZHNews;
@@ -124,6 +214,8 @@
 			children = (
 				EC9B8CB11D069C7900F29AA8 /* ZHChannelLabel.h */,
 				EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */,
+				ECF73C331D06A398003E706D /* ZHNewsCollectionViewCell.h */,
+				ECF73C341D06A398003E706D /* ZHNewsCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC9B8C9B1D06929300F29AA8 /* Build configuration list for PBXNativeTarget "ZHNews" */;
 			buildPhases = (
+				33BC406729B1ACCD241DD568 /* 📦 Check Pods Manifest.lock */,
 				EC9B8C801D06929300F29AA8 /* Sources */,
 				EC9B8C811D06929300F29AA8 /* Frameworks */,
 				EC9B8C821D06929300F29AA8 /* Resources */,
+				1A0720D2000002C8754BA836 /* 📦 Embed Pods Frameworks */,
+				E4BE847BEF27C9C93A2D0BD0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC9B8C971D06929300F29AA8 /* LaunchScreen.storyboard in Resources */,
+				EC0B1C621D06D605001DD2B0 /* NewsTableStoryboard.storyboard in Resources */,
 				EC9B8C941D06929300F29AA8 /* Assets.xcassets in Resources */,
 				EC9B8CA21D06948900F29AA8 /* topic_news.json in Resources */,
 				EC9B8C921D06929300F29AA8 /* Main.storyboard in Resources */,
@@ -204,17 +300,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A0720D2000002C8754BA836 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHNews/Pods-ZHNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33BC406729B1ACCD241DD568 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BE847BEF27C9C93A2D0BD0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHNews/Pods-ZHNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EC9B8C801D06929300F29AA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0B1C691D06E0D3001DD2B0 /* ZHHTTPSessionManager.m in Sources */,
+				EC0B1C6F1D071795001DD2B0 /* ZHNewsTableViewCell.m in Sources */,
 				EC9B8CB31D069C7900F29AA8 /* ZHChannelLabel.m in Sources */,
 				EC9B8CB01D069B5600F29AA8 /* NSArray+Log.m in Sources */,
 				EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */,
+				ECF73C351D06A398003E706D /* ZHNewsCollectionViewCell.m in Sources */,
+				EC0B1C601D06D59E001DD2B0 /* ZHNewsTableViewController.m in Sources */,
 				EC9B8C891D06929300F29AA8 /* main.m in Sources */,
 				EC9B8CA91D0694D100F29AA8 /* ZHNewsViewController.m in Sources */,
 				EC9B8CAC1D06951500F29AA8 /* ZHChannelModel.m in Sources */,
+				EC0B1C651D06D8FF001DD2B0 /* ZHNewsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +472,7 @@
 		};
 		EC9B8C9C1D06929300F29AA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA4B964A3BBD0A76912E231E /* Pods-ZHNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHNews/Info.plist;
@@ -334,6 +484,7 @@
 		};
 		EC9B8C9D1D06929300F29AA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EEA821369F322E32643A2FE /* Pods-ZHNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHNews/Info.plist;
@@ -362,6 +513,7 @@
 				EC9B8C9D1D06929300F29AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
