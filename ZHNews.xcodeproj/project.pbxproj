@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		EC9B8C891D06929300F29AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C881D06929300F29AA8 /* main.m */; };
 		EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */; };
-		EC9B8C8F1D06929300F29AA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C8E1D06929300F29AA8 /* ViewController.m */; };
 		EC9B8C921D06929300F29AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8C901D06929300F29AA8 /* Main.storyboard */; };
 		EC9B8C941D06929300F29AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8C931D06929300F29AA8 /* Assets.xcassets */; };
 		EC9B8C971D06929300F29AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8C951D06929300F29AA8 /* LaunchScreen.storyboard */; };
+		EC9B8CA21D06948900F29AA8 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8CA11D06948900F29AA8 /* topic_news.json */; };
+		EC9B8CA91D0694D100F29AA8 /* ZHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CA61D0694D100F29AA8 /* ZHNewsViewController.m */; };
+		EC9B8CAC1D06951500F29AA8 /* ZHChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CAB1D06951500F29AA8 /* ZHChannelModel.m */; };
+		EC9B8CB01D069B5600F29AA8 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CAF1D069B5600F29AA8 /* NSArray+Log.m */; };
+		EC9B8CB31D069C7900F29AA8 /* ZHChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,19 @@
 		EC9B8C881D06929300F29AA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC9B8C8D1D06929300F29AA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC9B8C8E1D06929300F29AA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC9B8C911D06929300F29AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC9B8C931D06929300F29AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC9B8C961D06929300F29AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC9B8C981D06929300F29AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC9B8CA11D06948900F29AA8 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		EC9B8CA51D0694D100F29AA8 /* ZHNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNewsViewController.h; sourceTree = "<group>"; };
+		EC9B8CA61D0694D100F29AA8 /* ZHNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNewsViewController.m; sourceTree = "<group>"; };
+		EC9B8CAA1D06951500F29AA8 /* ZHChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHChannelModel.h; sourceTree = "<group>"; };
+		EC9B8CAB1D06951500F29AA8 /* ZHChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHChannelModel.m; sourceTree = "<group>"; };
+		EC9B8CAE1D069B5600F29AA8 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		EC9B8CAF1D069B5600F29AA8 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		EC9B8CB11D069C7900F29AA8 /* ZHChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHChannelLabel.h; sourceTree = "<group>"; };
+		EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHChannelLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +69,10 @@
 		EC9B8C861D06929300F29AA8 /* ZHNews */ = {
 			isa = PBXGroup;
 			children = (
+				EC9B8CAD1D069B5600F29AA8 /* Log */,
 				EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */,
 				EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */,
-				EC9B8C8D1D06929300F29AA8 /* ViewController.h */,
-				EC9B8C8E1D06929300F29AA8 /* ViewController.m */,
-				EC9B8C901D06929300F29AA8 /* Main.storyboard */,
-				EC9B8C931D06929300F29AA8 /* Assets.xcassets */,
-				EC9B8C951D06929300F29AA8 /* LaunchScreen.storyboard */,
-				EC9B8C981D06929300F29AA8 /* Info.plist */,
+				EC9B8CA31D0694D100F29AA8 /* Home */,
 				EC9B8C871D06929300F29AA8 /* Supporting Files */,
 			);
 			path = ZHNews;
@@ -74,9 +81,60 @@
 		EC9B8C871D06929300F29AA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC9B8C931D06929300F29AA8 /* Assets.xcassets */,
+				EC9B8C951D06929300F29AA8 /* LaunchScreen.storyboard */,
+				EC9B8C981D06929300F29AA8 /* Info.plist */,
+				EC9B8CA11D06948900F29AA8 /* topic_news.json */,
 				EC9B8C881D06929300F29AA8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC9B8CA31D0694D100F29AA8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B8C901D06929300F29AA8 /* Main.storyboard */,
+				EC9B8CA41D0694D100F29AA8 /* Controller */,
+				EC9B8CA71D0694D100F29AA8 /* Model */,
+				EC9B8CA81D0694D100F29AA8 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EC9B8CA41D0694D100F29AA8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B8CA51D0694D100F29AA8 /* ZHNewsViewController.h */,
+				EC9B8CA61D0694D100F29AA8 /* ZHNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC9B8CA71D0694D100F29AA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B8CAA1D06951500F29AA8 /* ZHChannelModel.h */,
+				EC9B8CAB1D06951500F29AA8 /* ZHChannelModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC9B8CA81D0694D100F29AA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B8CB11D069C7900F29AA8 /* ZHChannelLabel.h */,
+				EC9B8CB21D069C7900F29AA8 /* ZHChannelLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC9B8CAD1D069B5600F29AA8 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B8CAE1D069B5600F29AA8 /* NSArray+Log.h */,
+				EC9B8CAF1D069B5600F29AA8 /* NSArray+Log.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +197,7 @@
 			files = (
 				EC9B8C971D06929300F29AA8 /* LaunchScreen.storyboard in Resources */,
 				EC9B8C941D06929300F29AA8 /* Assets.xcassets in Resources */,
+				EC9B8CA21D06948900F29AA8 /* topic_news.json in Resources */,
 				EC9B8C921D06929300F29AA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9B8C8F1D06929300F29AA8 /* ViewController.m in Sources */,
+				EC9B8CB31D069C7900F29AA8 /* ZHChannelLabel.m in Sources */,
+				EC9B8CB01D069B5600F29AA8 /* NSArray+Log.m in Sources */,
 				EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */,
 				EC9B8C891D06929300F29AA8 /* main.m in Sources */,
+				EC9B8CA91D0694D100F29AA8 /* ZHNewsViewController.m in Sources */,
+				EC9B8CAC1D06951500F29AA8 /* ZHChannelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +227,7 @@
 				EC9B8C911D06929300F29AA8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EC9B8C951D06929300F29AA8 /* LaunchScreen.storyboard */ = {
