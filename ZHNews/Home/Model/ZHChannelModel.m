@@ -12,9 +12,14 @@
 
 +(instancetype)channelWithDict:(NSDictionary *)dict{
     //字典转模型
-    id obj = [[self alloc] init];
-    [obj setValuesForKeysWithDictionary:dict];
-    return obj;
+    ZHChannelModel *model = [[self alloc] init];
+    [model setValuesForKeysWithDictionary:dict];
+    if ([model.tid isEqualToString:@"T1348647853363"]) {
+        model.URLString = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-20.html",model.tid];
+    }else {
+    model.URLString = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/list/%@/0-20.html",model.tid];
+    }
+    return model;
 }
 
 //防止字典中没有转换的key值引起崩溃

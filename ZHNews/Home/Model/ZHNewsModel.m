@@ -15,8 +15,8 @@
 + (void)newsModelWithPath:(NSString *)downloadPath andFinish:(CompleteBlock)completeBlock{
 
     NSMutableArray *dataArrM = [NSMutableArray array];
-    [[ZHHTTPSessionManager manager] downloadDataWithPathWithPath:downloadPath andComplete:^(NSDictionary *dict) {
-        
+    [[ZHHTTPSessionManager manager] downloadDataWithPathWithPath:downloadPath andComplete:^(id obj) {
+        NSDictionary *dict = (NSDictionary *)obj;
         NSString *key = dict.allKeys.lastObject;
         NSArray *array = dict[key];
         for (NSDictionary *dataDict in array) {

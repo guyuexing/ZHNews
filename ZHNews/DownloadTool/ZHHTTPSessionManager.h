@@ -8,7 +8,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-typedef void(^FinishBlock)(NSDictionary *dict);
+typedef void(^FinishBlock)(id obj);
 
 @interface ZHHTTPSessionManager : AFHTTPSessionManager
 

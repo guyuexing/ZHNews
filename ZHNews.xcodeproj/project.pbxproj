@@ -13,6 +13,9 @@
 		EC0B1C651D06D8FF001DD2B0 /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C641D06D8FF001DD2B0 /* ZHNewsModel.m */; };
 		EC0B1C691D06E0D3001DD2B0 /* ZHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C681D06E0D3001DD2B0 /* ZHHTTPSessionManager.m */; };
 		EC0B1C6F1D071795001DD2B0 /* ZHNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1C6E1D071795001DD2B0 /* ZHNewsTableViewCell.m */; };
+		EC93B7EB1D07DB6F008A7803 /* ZHCycleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93B7EA1D07DB6F008A7803 /* ZHCycleCollectionViewController.m */; };
+		EC93B7EE1D07DBD6008A7803 /* ZHCycleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93B7ED1D07DBD6008A7803 /* ZHCycleModel.m */; };
+		EC93B7F11D07DC2F008A7803 /* ZHCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93B7F01D07DC2F008A7803 /* ZHCycleCollectionViewCell.m */; };
 		EC9B8C891D06929300F29AA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C881D06929300F29AA8 /* main.m */; };
 		EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */; };
 		EC9B8C921D06929300F29AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9B8C901D06929300F29AA8 /* Main.storyboard */; };
@@ -39,6 +42,12 @@
 		EC0B1C681D06E0D3001DD2B0 /* ZHHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHTTPSessionManager.m; sourceTree = "<group>"; };
 		EC0B1C6D1D071795001DD2B0 /* ZHNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNewsTableViewCell.h; sourceTree = "<group>"; };
 		EC0B1C6E1D071795001DD2B0 /* ZHNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNewsTableViewCell.m; sourceTree = "<group>"; };
+		EC93B7E91D07DB6F008A7803 /* ZHCycleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCycleCollectionViewController.h; sourceTree = "<group>"; };
+		EC93B7EA1D07DB6F008A7803 /* ZHCycleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCycleCollectionViewController.m; sourceTree = "<group>"; };
+		EC93B7EC1D07DBD6008A7803 /* ZHCycleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCycleModel.h; sourceTree = "<group>"; };
+		EC93B7ED1D07DBD6008A7803 /* ZHCycleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCycleModel.m; sourceTree = "<group>"; };
+		EC93B7EF1D07DC2F008A7803 /* ZHCycleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCycleCollectionViewCell.h; sourceTree = "<group>"; };
+		EC93B7F01D07DC2F008A7803 /* ZHCycleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCycleCollectionViewCell.m; sourceTree = "<group>"; };
 		EC9B8C841D06929300F29AA8 /* ZHNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9B8C881D06929300F29AA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +145,43 @@
 			path = DownloadTool;
 			sourceTree = "<group>";
 		};
+		EC93B7E21D07C191008A7803 /* Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				EC93B7E31D07C191008A7803 /* Controller */,
+				EC93B7E41D07C191008A7803 /* Model */,
+				EC93B7E51D07C191008A7803 /* View */,
+			);
+			path = Cycle;
+			sourceTree = "<group>";
+		};
+		EC93B7E31D07C191008A7803 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC93B7E91D07DB6F008A7803 /* ZHCycleCollectionViewController.h */,
+				EC93B7EA1D07DB6F008A7803 /* ZHCycleCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC93B7E41D07C191008A7803 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC93B7EC1D07DBD6008A7803 /* ZHCycleModel.h */,
+				EC93B7ED1D07DBD6008A7803 /* ZHCycleModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC93B7E51D07C191008A7803 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC93B7EF1D07DC2F008A7803 /* ZHCycleCollectionViewCell.h */,
+				EC93B7F01D07DC2F008A7803 /* ZHCycleCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EC9B8C7B1D06929300F29AA8 = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +203,8 @@
 		EC9B8C861D06929300F29AA8 /* ZHNews */ = {
 			isa = PBXGroup;
 			children = (
+				EC93B7E21D07C191008A7803 /* Cycle */,
 				EC9B8CAD1D069B5600F29AA8 /* Log */,
-				EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */,
-				EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */,
 				EC9B8CA31D0694D100F29AA8 /* Home */,
 				EC0B1C661D06E042001DD2B0 /* DownloadTool */,
 				EC0B1C5A1D06D575001DD2B0 /* News */,
@@ -171,6 +216,8 @@
 		EC9B8C871D06929300F29AA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC9B8C8A1D06929300F29AA8 /* AppDelegate.h */,
+				EC9B8C8B1D06929300F29AA8 /* AppDelegate.m */,
 				EC9B8C931D06929300F29AA8 /* Assets.xcassets */,
 				EC9B8C951D06929300F29AA8 /* LaunchScreen.storyboard */,
 				EC9B8C981D06929300F29AA8 /* Info.plist */,
@@ -356,7 +403,9 @@
 				EC0B1C691D06E0D3001DD2B0 /* ZHHTTPSessionManager.m in Sources */,
 				EC0B1C6F1D071795001DD2B0 /* ZHNewsTableViewCell.m in Sources */,
 				EC9B8CB31D069C7900F29AA8 /* ZHChannelLabel.m in Sources */,
+				EC93B7EE1D07DBD6008A7803 /* ZHCycleModel.m in Sources */,
 				EC9B8CB01D069B5600F29AA8 /* NSArray+Log.m in Sources */,
+				EC93B7F11D07DC2F008A7803 /* ZHCycleCollectionViewCell.m in Sources */,
 				EC9B8C8C1D06929300F29AA8 /* AppDelegate.m in Sources */,
 				ECF73C351D06A398003E706D /* ZHNewsCollectionViewCell.m in Sources */,
 				EC0B1C601D06D59E001DD2B0 /* ZHNewsTableViewController.m in Sources */,
@@ -364,6 +413,7 @@
 				EC9B8CA91D0694D100F29AA8 /* ZHNewsViewController.m in Sources */,
 				EC9B8CAC1D06951500F29AA8 /* ZHChannelModel.m in Sources */,
 				EC0B1C651D06D8FF001DD2B0 /* ZHNewsModel.m in Sources */,
+				EC93B7EB1D07DB6F008A7803 /* ZHCycleCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

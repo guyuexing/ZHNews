@@ -10,4 +10,6 @@
 
 @interface ZHChannelLabel : UILabel
 
+@property (nonatomic,assign) CGFloat scale;
+
 @end

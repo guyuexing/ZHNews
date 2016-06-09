@@ -14,6 +14,10 @@
 
 @property (nonatomic,copy) NSString *tname;
 
+//新闻的服务器地址
+@property (nonatomic,copy) NSString *URLString;
+
+
 + (NSArray *)setChannelData;
 
 @end

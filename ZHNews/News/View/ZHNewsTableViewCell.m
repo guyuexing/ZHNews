@@ -28,15 +28,17 @@
 
     _model = model;
     
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:model.imgsrc] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _iconView.image = image;
-    }];
-    
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:model.imgsrc]];
     _titleLbl.text = model.title;
     _subTitleLbl.text = model.digest;
     
-    
-
+    if (model.imgextra.count == 2) {
+        for (NSInteger i = 0; i < model.imgextra.count; i++) {
+            NSDictionary *dict = model.imgextra[i];
+            NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
+            [self.imageArray[i] sd_setImageWithURL:url];
+        }
+    }
 }
 
 

@@ -10,8 +10,9 @@
 #import "ZHChannelModel.h"
 #import "ZHChannelLabel.h"
 #import "ZHNewsCollectionViewCell.h"
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
-@interface ZHNewsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface ZHNewsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 
 //频道
 @property (weak, nonatomic) IBOutlet UIScrollView *channelView;
@@ -25,6 +26,11 @@
 //流布局
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *newsCollectionFlowLayout;
 
+//保存所有的频道
+@property (nonatomic,strong) NSMutableArray<ZHChannelLabel *> *channelLabelArr;
+
+//保存点击的当前频道
+@property (nonatomic,strong) ZHChannelLabel *currentChannel;
 
 @end
 
@@ -44,7 +50,7 @@
 #pragma mark - 设置UICollectionCell的属性
 - (void)setupNewsCollectionItem{
 
-    CGFloat itemW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat itemW = kScreenWidth;
     CGFloat itemH = [UIScreen mainScreen].bounds.size.height - 64 - 44;
     self.newsCollectionFlowLayout.itemSize = CGSizeMake(itemW, itemH);
     self.newsCollectionView.pagingEnabled = YES;
@@ -57,15 +63,96 @@
     CGFloat chanLblY = 0;
     CGFloat chanLblW = 80;
     CGFloat chanLblH = 44;
+    
+    self.channelLabelArr = [NSMutableArray array];
     for (NSInteger i = 0; i < self.channelArr.count; i++) {
         ZHChannelLabel *chanLbl = [[ZHChannelLabel alloc] init];
         chanLbl.text = self.channelArr[i].tname;
         CGFloat chanLblX = i*chanLblW;
         chanLbl.frame = CGRectMake(chanLblX, chanLblY, chanLblW, chanLblH);
-        chanLbl.backgroundColor =  [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
         [self.channelView addSubview:chanLbl];
+        
+        if (i == 0) {
+            chanLbl.scale = 1;
+        }
+        
+        //MARK: - 新闻页面滚动相关
+        [self.channelLabelArr addObject:chanLbl];
+        chanLbl.userInteractionEnabled = YES;
+        chanLbl.tag = i;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(channelClick:)];
+        [chanLbl addGestureRecognizer:gesture];
     }
     self.channelView.contentSize = CGSizeMake(chanLblW * self.channelArr.count, 0);
+}
+
+#pragma mark - 点击频道，新闻的TableView会跳转与之对应
+- (void)channelClick:(UITapGestureRecognizer *)gesture{
+
+    ZHChannelLabel *currentLbl = (ZHChannelLabel *)gesture.view;
+    self.currentChannel = currentLbl;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:currentLbl.tag inSection:0];
+    [self.newsCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    [self channelScrollToCenter];
+}
+#pragma mark - 拖动CollectionView让频道随之滚动
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+
+    NSInteger currentPage = scrollView.contentOffset.x/kScreenWidth;
+    self.currentChannel = self.channelLabelArr[currentPage];
+    [self channelScrollToCenter];
+
+}
+
+#pragma mark - 点击频道后让点击的频道滚动到中间位置
+-(void)channelScrollToCenter{
+
+    CGFloat needsScrollInstance = self.currentChannel.center.x - self.channelView.bounds.size.width/2;
+    CGFloat maxScrollInstance = self.channelView.contentSize.width - kScreenWidth;
+    if (needsScrollInstance <= 0) {
+        needsScrollInstance = 0;
+    }else if (needsScrollInstance >= maxScrollInstance){
+        needsScrollInstance = maxScrollInstance;
+    }
+    [self.channelView setContentOffset:CGPointMake(needsScrollInstance, 0) animated:YES];
+    
+    //点击频道后让被点击的频道变大变红，其余的恢复原样
+    for (ZHChannelLabel *channelLable in self.channelLabelArr) {
+        if (channelLable == self.currentChannel) {
+            channelLable.scale = 1.0;
+        }else{
+            channelLable.scale = 0.0;
+        }
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //获取滚动到哪一个频道,如果是第一个频道或最后一个频道就直接返回
+    CGFloat offsetRate = scrollView.contentOffset.x/kScreenWidth;
+    if (offsetRate < 0 || offsetRate > self.channelLabelArr.count-1) return;
+    //计算左边频道的索引
+    int leftIndex = (int)scrollView.contentOffset.x/kScreenWidth;
+    //计算右边频道的索引
+    int rightIndex = leftIndex + 1;
+    //右边频道的缩放比例
+    CGFloat rightRadio = offsetRate - leftIndex;
+    //左边频道的缩放比例
+    CGFloat leftRadio = 1-rightRadio;
+    
+    self.channelLabelArr[leftIndex].scale = leftRadio;
+    if (leftIndex<self.channelLabelArr.count-1) {
+        self.channelLabelArr[rightIndex].scale = rightRadio;
+
+    }
+    
+    //NSLog(@"%f--%f--%f",offsetRate,rightRadio,leftRadio);
+}
+
+#pragma mark - 改变频道的字体大小和颜色
+- (void)changeChannelSizeAndColor{
+
+   
+
 }
 
 #pragma mark - UICollectionView的数据源方法
@@ -78,12 +165,7 @@
     ZHNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsItem" forIndexPath:indexPath];
     ZHChannelModel *channelModel = self.channelArr[indexPath.item];
     
-    //根据频道的tid来确定服务器地址
-    if ([channelModel.tid isEqualToString:@"T1348647853363"]) {
-        cell.URLStirng = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-20.html",channelModel.tid];
-    }else{
-        cell.URLStirng = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/list/%@/0-20.html",channelModel.tid];
-    }
+    cell.URLStirng = channelModel.URLString;
     return cell;
 
 }

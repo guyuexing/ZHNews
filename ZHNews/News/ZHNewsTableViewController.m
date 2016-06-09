@@ -57,6 +57,8 @@
     self.cellID = @"baseCell";
     if (model.imgType == 1) {
         self.cellID = @"bigCell";
+    }else if(model.imgextra.count== 2){
+        self.cellID = @"threeImage";
     }
     
     ZHNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellID forIndexPath:indexPath];
@@ -68,7 +70,9 @@
 
     ZHNewsModel *model = self.dataArray[indexPath.row];
     if (model.imgType == YES) {
-        return 140;
+        return 200;
+    }else if(model.imgextra.count ==2){
+        return 120;
     }
     return 80;
 
